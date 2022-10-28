@@ -1,6 +1,7 @@
 import PageObject.HomePageScooter;
 import org.hamcrest.MatcherAssert;
 import org.junit.After;
+import org.junit.Before;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.junit.Test;
@@ -13,21 +14,23 @@ import java.time.Duration;
 
 import static org.hamcrest.CoreMatchers.is;
 
-public class clickOnArrowAndCheckText {
+public class ClickOnArrowAndCheckText {
     private WebDriver driver;
+
+    @Before
+    public void setUp() {
+        //выбор драйвера для браузера
+        driver = new ChromeDriver();
+    }
 
 
     //тесты для проверки текста после нажатия на стрелочки
     @Test
-    public void checkQuestions_1(){
-        //драйвер для хрома
-        driver = new ChromeDriver();
+    public void checkQuestions1(){
 
-
-        //переход на страницу тестового приложения
-        driver.get("https://qa-scooter.praktikum-services.ru/");
 
         HomePageScooter objHomePage = new HomePageScooter(driver);
+        objHomePage.open();
         objHomePage.scrollPageDown();
         objHomePage.clickOnFirstButtonWithQuestion();
         new WebDriverWait(driver, Duration.ofSeconds(5))
@@ -39,15 +42,15 @@ public class clickOnArrowAndCheckText {
     }
 
     @Test
-    public void checkQuestions_2(){
+    public void checkQuestions2(){
         //драйвер для хрома
-        driver = new ChromeDriver();
 
 
         //переход на страницу тестового приложения
-        driver.get("https://qa-scooter.praktikum-services.ru/");
+
 
         HomePageScooter objHomePage = new HomePageScooter(driver);
+        objHomePage.open();
         objHomePage.scrollPageDown();
         objHomePage.clickOnSecondButtonWithQuestion();
         new WebDriverWait(driver, Duration.ofSeconds(5))
@@ -59,15 +62,11 @@ public class clickOnArrowAndCheckText {
     }
 
     @Test
-    public void checkQuestions_3(){
-        //драйвер для хрома
-        driver = new ChromeDriver();
+    public void checkQuestions3(){
 
-
-        //переход на страницу тестового приложения
-        driver.get("https://qa-scooter.praktikum-services.ru/");
 
         HomePageScooter objHomePage = new HomePageScooter(driver);
+        objHomePage.open();
         objHomePage.scrollPageDown();
         objHomePage.clickOnThirdButtonWithQuestion();
         new WebDriverWait(driver, Duration.ofSeconds(5))
@@ -79,15 +78,10 @@ public class clickOnArrowAndCheckText {
     }
 
     @Test
-    public void checkQuestions_4(){
-        //драйвер для хрома
-        driver = new ChromeDriver();
-
-
-        //переход на страницу тестового приложения
-        driver.get("https://qa-scooter.praktikum-services.ru/");
+    public void checkQuestions4(){
 
         HomePageScooter objHomePage = new HomePageScooter(driver);
+        objHomePage.open();
         objHomePage.scrollPageDown();
         objHomePage.clickOnFourthButtonWithQuestion();
         new WebDriverWait(driver, Duration.ofSeconds(5))
@@ -99,15 +93,10 @@ public class clickOnArrowAndCheckText {
     }
 
     @Test
-    public void checkQuestions_5(){
-        //драйвер для хрома
-        driver = new ChromeDriver();
-
-
-        //переход на страницу тестового приложения
-        driver.get("https://qa-scooter.praktikum-services.ru/");
+    public void checkQuestions5(){
 
         HomePageScooter objHomePage = new HomePageScooter(driver);
+        objHomePage.open();
         objHomePage.scrollPageDown();
         objHomePage.clickOnFivethButtonWithQuestion();
         new WebDriverWait(driver, Duration.ofSeconds(5))
@@ -119,15 +108,10 @@ public class clickOnArrowAndCheckText {
     }
 
     @Test
-    public void checkQuestions_6(){
-        //драйвер для хрома
-        driver = new ChromeDriver();
-
-
-        //переход на страницу тестового приложения
-        driver.get("https://qa-scooter.praktikum-services.ru/");
+    public void checkQuestions6(){
 
         HomePageScooter objHomePage = new HomePageScooter(driver);
+        objHomePage.open();
         objHomePage.scrollPageDown();
         objHomePage.clickOnSixthButtonWithQuestion();
         new WebDriverWait(driver, Duration.ofSeconds(5))
@@ -139,15 +123,10 @@ public class clickOnArrowAndCheckText {
     }
 
     @Test
-    public void checkQuestions_7(){
-        //драйвер для хрома
-        driver = new ChromeDriver();
-
-
-        //переход на страницу тестового приложения
-        driver.get("https://qa-scooter.praktikum-services.ru/");
+    public void checkQuestions7(){
 
         HomePageScooter objHomePage = new HomePageScooter(driver);
+        objHomePage.open();
         objHomePage.scrollPageDown();
         objHomePage.clickOnSeventhButtonWithQuestion();
         new WebDriverWait(driver, Duration.ofSeconds(5))
@@ -159,15 +138,11 @@ public class clickOnArrowAndCheckText {
     }
 
     @Test
-    public void checkQuestions_8(){
-        //драйвер для хрома
-        driver = new ChromeDriver();
+    public void checkQuestions8(){
 
-
-        //переход на страницу тестового приложения
-        driver.get("https://qa-scooter.praktikum-services.ru/");
 
         HomePageScooter objHomePage = new HomePageScooter(driver);
+        objHomePage.open();
         objHomePage.scrollPageDown();
         objHomePage.clickOnEighthButtonWithQuestion();
         new WebDriverWait(driver, Duration.ofSeconds(5))

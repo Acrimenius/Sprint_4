@@ -5,9 +5,11 @@ import org.openqa.selenium.WebDriver;
 public class OrderElements {
     private WebDriver driver;
 
+    private final String url = "https://qa-scooter.praktikum-services.ru/";
+
     // Кнопки "Заказать" (верхняя и нижняя кнопка)
     private By topOrderButton = By.className("Button_Button__ra12g");
-    private By bottomOrderButton = By.xpath(".//button[@class='Button_Button__ra12g']");
+    private By bottomOrderButton = By.className("Home_FinishButton__1_cWm");
     private By cookieMessage = By.className("App_CookieButton__3cvqF");
 
 
@@ -52,7 +54,13 @@ public class OrderElements {
 
 
     public OrderElements(WebDriver driver) {
+
         this.driver = driver;
+    }
+
+    public OrderElements open() {
+        driver.get(url);
+        return this;
     }
 
     public String checkOrderIsDone() {
