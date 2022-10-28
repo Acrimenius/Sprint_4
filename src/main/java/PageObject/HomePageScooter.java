@@ -9,6 +9,8 @@ public class HomePageScooter {
 
     private WebDriver driver;
 
+    private final String url = "https://qa-scooter.praktikum-services.ru/";
+
     private By subHeader = By.className("Home_SubHeader__zwi_E");
     //локаторы для кнопок с вопросами
     private By accordionButton_0 = By.id("accordion__heading-0");
@@ -40,6 +42,11 @@ public class HomePageScooter {
     public HomePageScooter(WebDriver driver) {
 
         this.driver = driver;
+    }
+
+    public HomePageScooter open() {
+        driver.get(url);
+        return this;
     }
 
     //метод для прокрутки страницы
