@@ -12,7 +12,7 @@ public class HomePageScooter {
     private final String url = "https://qa-scooter.praktikum-services.ru/";
 
     private By subHeader = By.className("Home_SubHeader__zwi_E");
-    //локаторы для кнопок с вопросами
+    //локаторы кнопок с вопросами
     private By accordionButton_0 = By.id("accordion__heading-0");
     private By accordionButton_1 = By.id("accordion__heading-1");
     private By accordionButton_2 = By.id("accordion__heading-2");

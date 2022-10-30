@@ -43,10 +43,6 @@ public class ClickOnArrowAndCheckText {
 
     @Test
     public void checkQuestions2(){
-        //драйвер для хрома
-
-
-        //переход на страницу тестового приложения
 
 
         HomePageScooter objHomePage = new HomePageScooter(driver);

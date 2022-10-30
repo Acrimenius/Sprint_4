@@ -66,7 +66,7 @@ public class OrderElements {
     public String checkOrderIsDone() {
         return driver.findElement(orderDoneHeader).getText();
     }
-    // Методы кликов на кнопки -----------------------------------------------
+    // Методы кликов на кнопки --------------------------------------------
     public void clickCookieButton() {
         driver.findElement(cookieMessage).click();
     }

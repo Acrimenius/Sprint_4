@@ -31,10 +31,9 @@ public class OrderElementsTest {
 
     public void createOrder1() {
 
-// время ожидания 3 сек
-
         OrderElements objOrderElements = new OrderElements(driver);
         objOrderElements.open();
+        //ожидание
         new WebDriverWait(driver, Duration.ofSeconds(3))
                 .until(ExpectedConditions.visibilityOfElementLocated(By.className("App_CookieButton__3cvqF")));
         objOrderElements.clickCookieButton();
